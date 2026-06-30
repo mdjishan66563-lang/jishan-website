@@ -9,27 +9,29 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background: #060b13;
+            background: #0a0f1d;
             color: #e2e8f0;
-            line-height: 1.6;
-            padding-bottom: 40px;
-        }
-        header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            padding: 70px 20px;
             text-align: center;
-            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 40px 20px;
         }
-        .profile-wrapper {
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 20px;
+        .portfolio-card {
+            max-width: 550px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #111a36, #0d1527);
+            border-radius: 30px;
+            padding: 40px 30px;
+            border: 1px solid #1e293b;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .profile-container {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 25px auto;
             border-radius: 50%;
-            padding: 4px;
+            padding: 5px;
             background: linear-gradient(45deg, #00f2fe, #4facfe);
             box-shadow: 0 0 25px rgba(0, 242, 254, 0.3);
         }
@@ -38,132 +40,68 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
+            background: #111a36;
+            display: block;
         }
         h1 {
             font-size: 2.8rem;
             font-weight: 800;
-            background: linear-gradient(to right, #00f2fe, #4facfe);
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
         }
-        .subtitle {
+        .tagline {
             color: #38bdf8;
             font-size: 1.2rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
         }
-        .college {
+        .university {
             color: #94a3b8;
             font-size: 1rem;
-            margin-top: 5px;
+            margin-bottom: 30px;
         }
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-        section {
-            background: #0f172a;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        .section-box {
+            background: #141f3d;
             border-radius: 20px;
             padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: left;
+            margin-bottom: 20px;
+            border: 1px solid #1e293b;
         }
-        h2 {
+        .section-box h2 {
             color: #00f2fe;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 15px;
-            border-bottom: 2px solid rgba(0, 242, 254, 0.2);
-            padding-bottom: 6px;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .grid-item {
-            background: #1e293b;
-            padding: 15px;
-            border-radius: 12px;
-            border: 1px solid rgba(56, 189, 248, 0.1);
-        }
-        .grid-item h3 {
-            color: #38bdf8;
-            margin-bottom: 5px;
-            font-size: 1.05rem;
-        }
-        .grid-item p {
-            font-size: 0.9rem;
+        .section-box p {
             color: #94a3b8;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #64748b;
-            font-size: 0.85rem;
+            line-height: 1.7;
+            font-size: 0.95rem;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="profile-wrapper">
-            <!-- Premium Internet Image URL -->
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=500&q=80" alt="Jishan Alam" class="profile-img">
+    <div class="portfolio-card">
+        <!-- Tumhari apni photo ko har format me dhoondhne wala automatic container -->
+        <div class="profile-container">
+            <img src="photo.jpg" onerror="this.src='photo.JPG'; this.onerror=function(){this.src='photo.png'; this.onerror=function(){this.src='photo.jpeg';}};" alt="Jishan Alam" class="profile-img">
         </div>
-        <h1>Jishan Alam</h1>
-        <p class="subtitle">B.Tech CSE Student</p>
-        <p class="college">Desh Bhagat University</p>
-    </header>
-
-    <div class="container">
         
-        <section>
+        <h1>Jishan Alam</h1>
+        <p class="tagline">B.Tech CSE Student</p>
+        <p class="university">Desh Bhagat University</p>
+
+        <div class="section-box">
             <h2>About Me</h2>
-            <p>Welcome to my portfolio! I am an aspiring Software Engineer driven by a passion for computer science, software architecture, and full-stack web development. I love turning complex logic into functional, responsive, and visually appealing web applications.</p>
-        </section>
-
-        <section>
-            <h2>Core Skills</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <h3>Software Engineering</h3>
-                    <p>Understanding of core concepts and system logic.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Programming</h3>
-                    <p>Writing and optimising algorithms using C and C++.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Web Development</h3>
-                    <p>Creating interactive designs with HTML, CSS, and modern tech.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Academic Projects</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <h3>Personal Portfolio</h3>
-                    <p>A sleek, modern web platform deployed on GitHub to display technical expertise.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Logic & Algorithms</h3>
-                    <p>Developing structured code assignments using software foundations.</p>
-                </div>
-            </div>
-        </section>
-
+            <p>Hello! I am an aspiring Software Engineer and Tech Enthusiast. Passionate about coding, software architecture, and full-stack web development. I love exploring complex algorithms and translating them into clean, scalable digital products.</p>
+        </div>
     </div>
-
-    <footer>
-        <p>© 2026 Jishan Alam. Portfolio Built for Growth.</p>
-    </footer>
 
 </body>
 </html>
