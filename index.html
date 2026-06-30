@@ -9,192 +9,165 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             scroll-behavior: smooth;
         }
         body {
-            background: #0d1117;
-            color: #c9d1d9;
+            background: #0a0f1d;
+            color: #e2e8f0;
             line-height: 1.6;
-            padding-bottom: 50px;
+            padding: 40px 20px;
         }
-        header {
-            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
-            padding: 80px 20px;
+        .portfolio-card {
+            max-width: 650px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #111a36, #0d1527);
+            border-radius: 30px;
+            padding: 40px 30px;
+            border: 1px solid #1e293b;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             text-align: center;
-            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
         .profile-container {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 25px;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 25px auto;
             border-radius: 50%;
-            padding: 5px;
-            background: linear-gradient(45deg, #00f2fe, #4facfe);
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
+            padding: 4px;
+            background: linear-gradient(45deg, #ff007f, #4facfe);
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.3);
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            position: relative;
         }
         .profile-img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #0d1117;
-        }
-        .profile-placeholder {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #1e293b;
-            color: #00f2fe;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 5rem;
-            border-radius: 50%;
+            object-position: center 20%; /* Isse tumhara chehra perfectly center me dikhega */
+            background: #111a36;
+            display: block;
         }
         h1 {
             font-size: 3rem;
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             background: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
         }
-        .subtitle {
+        .tagline {
             color: #38bdf8;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 5px;
         }
-        .college {
-            color: #8b949e;
-            font-size: 1.1rem;
-            margin-top: 5px;
+        .university {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            margin-bottom: 35px;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        section {
-            background: #161b22;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        .section-box {
+            background: #141f3d;
             border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border-left: 5px solid #00f2fe;
+            padding: 25px;
+            text-align: left;
+            margin-bottom: 25px;
+            border: 1px solid #1e293b;
         }
-        h2 {
+        .section-box h2 {
             color: #00f2fe;
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
-            border-bottom: 2px solid rgba(0, 242, 254, 0.2);
-            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+            padding-bottom: 5px;
         }
-        p {
-            font-size: 1rem;
-            margin-bottom: 15px;
+        .section-box p {
+            color: #94a3b8;
+            font-size: 0.95rem;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
         }
         .grid-item {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 14px;
+            background: #0d1527;
+            padding: 15px;
+            border-radius: 12px;
             border: 1px solid rgba(56, 189, 248, 0.1);
         }
         .grid-item h3 {
             color: #38bdf8;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-        .grid-item p {
-            font-size: 0.95rem;
-            color: #8b949e;
-            margin-bottom: 0;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
         }
         footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #8b949e;
-            font-size: 0.9rem;
             margin-top: 20px;
+            color: #64748b;
+            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <div class="portfolio-card">
         <div class="profile-container">
-            <!-- New reliable image source link -->
-            <img src="https://api.dicebear.com/7.x/initials/svg?seed=Jishan+Alam&backgroundType=gradientLinear&gradientColor=1e293b,0f172a" alt="Jishan Alam" class="profile-img">
+            <!-- Tumhari pink flowers wali photo ka direct safe link cloud se -->
+            <img src="https://i.ibb.co/3mN68mK/496.jpg" alt="Jishan Alam" class="profile-img">
         </div>
-        <h1>Jishan Alam</h1>
-        <p class="subtitle">B.Tech CSE Student</p>
-        <p class="college">Desh Bhagat University</p>
-    </header>
-
-    <div class="container">
         
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! I am an aspiring Software Engineer driven by a deep passion for computer science, scalable software architecture, and full-stack web development. I love turning complex problem statements into elegant, high-performance digital realities.</p>
-        </section>
+        <h1>Jishan Alam</h1>
+        <p class="tagline">B.Tech CSE Student</p>
+        <p class="university">Desh Bhagat University</p>
 
-        <section id="expertise">
+        <div class="section-box">
+            <h2>About Me</h2>
+            <p>Hello! I am an aspiring Software Engineer and Tech Enthusiast. Passionate about coding, software architecture, and full-stack web development. I love exploring complex algorithms and translating them into clean, scalable digital products.</p>
+        </div>
+
+        <div class="section-box">
             <h2>Core Expertise</h2>
             <div class="grid">
                 <div class="grid-item">
-                    <h3>Software Engineering</h3>
-                    <p>Familiar with fundamental design principles and systemic patterns for backend development.</p>
+                    <h3>Software Logic</h3>
+                    <p>Understanding basic structural algorithms and system designs.</p>
                 </div>
                 <div class="grid-item">
                     <h3>Programming</h3>
-                    <p>Building core logic and optimizing computationally intensive problems using C and C++.</p>
+                    <p>Developing efficient code blocks using C and C++ languages.</p>
                 </div>
                 <div class="grid-item">
-                    <h3>Web Architectures</h3>
-                    <p>Creating highly responsive interfaces and modular frontend layouts using modern HTML and CSS.</p>
+                    <h3>Web Stack</h3>
+                    <p>Designing modern, responsive interfaces using clean HTML and CSS scripts.</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
+        <div class="section-box">
+            <h2>Academic Engineering Projects</h2>
             <div class="grid">
                 <div class="grid-item">
                     <h3>Personal Tech Portfolio</h3>
-                    <p>A fast, sleek developer portfolio layout build with highly structured modular styling and automated platform hosting.</p>
+                    <p>A sleek, optimized portfolio platform hosted on cloud repositories to showcase development skills.</p>
                 </div>
                 <div class="grid-item">
                     <h3>Computational Scripts</h3>
-                    <p>Solving core algorithm problems and optimizing operations during standard engineering lab assignments.</p>
+                    <p>Solving problem statements and optimizing operations during standard engineering lab assignments.</p>
                 </div>
             </div>
-        </section>
+        </div>
 
+        <footer>
+            <p>© 2026 Jishan Alam. Portfolio Built for Growth.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>© 2026 Jishan Alam. All Rights Reserved. Built with Purpose.</p>
-    </footer>
 
 </body>
 </html>
