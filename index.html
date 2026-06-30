@@ -1,120 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jishan | Portfolio</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body{
-    background:#0f172a;
-    color:white;
-}
-
-header{
-    text-align:center;
-    padding:80px 20px;
-}
-
-header h1{
-    font-size:3rem;
-}
-
-header p{
-    color:#cbd5e1;
-    margin-top:10px;
-}
-
-section{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
-}
-
-.card{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    margin-top:20px;
-}
-
-h2{
-    margin-bottom:15px;
-    color:#38bdf8;
-}
-
-.skills span{
-    display:inline-block;
-    background:#38bdf8;
-    color:black;
-    padding:8px 15px;
-    border-radius:20px;
-    margin:5px;
-    font-weight:bold;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    color:#94a3b8;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jishan Alam | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: #0b1329;
+            color: #f4f5f6;
+            text-align: center;
+            padding: 30px 15px;
+        }
+        .portfolio-card {
+            max-width: 550px;
+            margin: 30px auto;
+            background: rgba(28, 37, 65, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 35px 25px;
+            border: 1px solid rgba(58, 80, 107, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .profile-frame {
+            position: relative;
+            width: 170px;
+            height: 170px;
+            margin: 0 auto 25px auto;
+        }
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #48cae4;
+            box-shadow: 0 0 20px rgba(72, 202, 228, 0.4);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #48cae4, #00b4d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        .university {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .course {
+            display: inline-block;
+            background: rgba(0, 180, 216, 0.15);
+            color: #48cae4;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            border: 1px solid rgba(72, 202, 228, 0.3);
+        }
+        .about-section {
+            background: #1c2541;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: left;
+            border-left: 5px solid #00b4d8;
+        }
+        .about-section h2 {
+            color: #48cae4;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .about-section p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <img src="photo.jpg" alt="Jishan" style="width:180px; height:180px; border-radius:50%; object-fit:cover; display:block; margin:20px auto;">
-    
-    <h1>Md Jishan</h1>
-    <p>B.Tech CSE Student</p>
-</header>
+    <div class="portfolio-card">
+        <!-- Photo Setup -->
+        <div class="profile-frame">
+            <img src="photo.jpg" alt="Jishan Alam" class="profile-img">
+        </div>
+        
+        <!-- Unique Gradient Name -->
+        <h1>Jishan Alam</h1>
+        
+        <!-- College Details -->
+        <p class="university">Desh Bhagat University</p>
+        <span class="course">B.Pharm • Sem 2nd</span>
 
-<section>
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            Hello! I am Md Jishan, a B.Tech Computer Science and Engineering student.
-            I am passionate about technology, coding, web development, and learning
-            new skills. My goal is to become a successful software engineer and build
-            useful digital products.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>C</span>
-            <span>C++</span>
-            <span>Python</span>
+        <!-- Professional About Section -->
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>Welcome to my profile! I am a dedicated Bachelor of Pharmacy student passionate about healthcare advancement and pharmaceutical sciences. Alongside my academic journey, I enjoy expanding my horizon by diving into modern technologies, programming, and web development. I love building innovative solutions that connect science with digital tools.</p>
         </div>
     </div>
-
-    <div class="card">
-        <h2>Education</h2>
-        <p>B.Tech in Computer Science & Engineering</p>
-    </div>
-
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: youremail@example.com</p>
-        <p>Phone: +91 XXXXX XXXXX</p>
-    </div>
-</section>
-
-<footer>
-    © 2026 Md Jishan | Portfolio Website
-</footer>
 
 </body>
 </html>
